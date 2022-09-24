@@ -12,7 +12,7 @@ def get_long_description():
 
 def get_version():
     path = os.path.join(
-        os.path.dirname(os.path.abspath(__file__)), "toolkit", "version.py"
+        os.path.dirname(os.path.abspath(__file__)), "mycli", "version.py"
     )
     g = {}
     with open(path) as fp:
@@ -20,7 +20,7 @@ def get_version():
     return g["__version__"]
 
 setup(
-    name="toolkit",
+    name="mycli",
     version=get_version(),
     description="cli",
     long_description=get_long_description(),
@@ -28,11 +28,12 @@ setup(
     python_requires=">=3.7",
     install_requires=[
         "click>=7.1.1",
-        "click-default-group-wheel>=1.2.2",
+        "click-default-group-wheel>=1.2.2"
     ],
     entry_points="""
         [console_scripts]
-        toolkit=toolkit.cli:cli
+        mycli=mycli.cli:cli
     """
 )
+
 
