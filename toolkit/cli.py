@@ -1,5 +1,4 @@
 import click
-import sys
 from click_default_group import DefaultGroup
 from version import __version__
 import comp
