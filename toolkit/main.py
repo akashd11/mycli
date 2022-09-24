@@ -1,4 +1,4 @@
-from toolkit import cli
+import cli as cp
 
 if __name__ == "__main__":
-    cli()
+    cp.cli()
